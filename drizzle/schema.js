@@ -4,6 +4,7 @@ export const profiles = pgTable('profiles', {
   id: serial('id').primaryKey(),
   name: text('name').notNull(),
   bio: text('bio'),
+  imageUrl: text('image_url'),
   createdAt: timestamp('created_at').defaultNow(),
 });
 

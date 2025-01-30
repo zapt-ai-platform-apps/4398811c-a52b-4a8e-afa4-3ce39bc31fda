@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS profiles (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
   bio TEXT,
+  image_url TEXT,
   created_at TIMESTAMP DEFAULT NOW()
 );
 
