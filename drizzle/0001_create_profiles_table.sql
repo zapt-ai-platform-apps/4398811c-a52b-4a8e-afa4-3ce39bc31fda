@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS profiles (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  bio TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS likes (
+  id SERIAL PRIMARY KEY,
+  profile_id INTEGER REFERENCES profiles(id),
+  liked BOOLEAN NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
